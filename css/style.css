@@ -1,0 +1,71 @@
+html,body{
+	font-family: "HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial",sans-serif;
+	font-size: 10px;
+	line-height: 1.5;
+	height: 100%;
+}
+/* 公共类 */
+a{
+	font-style: normal;
+	color: #222;
+}
+a:hover{
+	text-decoration: none;
+	color: #4d7bd6;
+}
+li{
+	list-style: none;
+}
+em{
+	font-style: normal;
+	font-weight: 700;
+	color: #1c5ac4;
+}
+i{
+	font-style: normal;
+}
+.container{
+	height: 100%;
+}
+/* 清楚浮动 */
+.clearfix:before,
+.clearfix:after{
+	content: "";
+	display: table;
+}
+.clearfix:after{
+	clear: both;
+}
+.clearfix{
+	zoom: 1;/*IE/7/6*/
+}
+/* sidebar */
+.sidebar{
+	height: 100%;
+	width: 12%;
+	float: left;
+	background: #1f273f;
+}
+.sidebar > ul{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+.sidebar > ul > li{
+	line-height: 4.7rem;
+}
+.sidebar > ul > li{
+	border-bottom: 1px solid #11172b;
+}
+.sidebar > ul > li:hover{
+	background: #11172b;
+}
+
+/* content */
+.content{
+	height: 100%;
+	width: 88%;
+	float: left;
+	background: #ececec;
+}
