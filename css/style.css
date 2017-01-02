@@ -7,11 +7,9 @@ html,body{
 /* 公共类 */
 a{
 	font-style: normal;
-	color: #222;
 }
 a:hover{
 	text-decoration: none;
-	color: #4d7bd6;
 }
 li{
 	list-style: none;
@@ -24,8 +22,20 @@ em{
 i{
 	font-style: normal;
 }
+.pull-right{
+	float: right;
+	/* font-size: 1rem; */
+}
+.hidden{
+	display: none;
+}
 .container{
 	height: 100%;
+}
+/* iconfont */
+.iconfont{
+	padding: 0 12px;
+	color: #7c7f92;
 }
 /* 清楚浮动 */
 .clearfix:before,
@@ -42,30 +52,60 @@ i{
 /* sidebar */
 .sidebar{
 	height: 100%;
-	width: 12%;
+	width: 200px;
 	float: left;
 	background: #1f273f;
 }
 .sidebar > ul{
+	box-sizing: border-box;
+	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	color: #7c7f92;
+}
+.sidebar > ul > li{
+	line-height: 4rem;
+}
+.sidebar > ul > li > a{
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}
+.sidebar > ul > li > a:hover{
 	color: #fff;
 }
-.sidebar > ul > li{
-	line-height: 4.7rem;
-}
-.sidebar > ul > li{
-	border-bottom: 1px solid #11172b;
-}
-.sidebar > ul > li:hover{
+.sidebar > ul > li > ul{
+	overflow: hidden;
+	display: none; 
 	background: #11172b;
 }
-
+.sidebar > ul > li > a > i.add{
+	animation: add 0.2s linear forwards;
+}
+@keyframes add{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-90deg);
+	}
+}
+.sidebar > ul > li > a > i.add_1{
+	animation: add_1 0.2s linear forwards;
+}
+@keyframes add{
+	0% {
+		transform: rotate(-90deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
 /* content */
 .content{
 	height: 100%;
-	width: 88%;
+	width: calc(100% - 200px);
 	float: left;
 	background: #ececec;
 }
