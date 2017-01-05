@@ -5,8 +5,12 @@ html,body{
 	height: 100%;
 }
 /* 公共类 */
+img{
+	border: none;
+}
 a{
 	font-style: normal;
+	text-decoration: none;
 }
 a:hover{
 	text-decoration: none;
@@ -35,7 +39,7 @@ i{
 /* iconfont */
 .iconfont{
 	padding: 0 12px;
-	color: #7c7f92;
+	color: #5d6f7b;
 }
 /* 清楚浮动 */
 .clearfix:before,
@@ -50,19 +54,32 @@ i{
 	zoom: 1;/*IE/7/6*/
 }
 /* sidebar */
+.logo{
+	padding: 36px 0 16px 0;
+	background: #f25743;
+}
+.logo p{
+	text-align: center;
+	color: #fff;
+	font-size: 1.6rem;
+}
+.logo .logo-img{
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+}
 .sidebar{
 	height: 100%;
 	width: 200px;
 	float: left;
-	background: #1f273f;
+	background: #222629;
 }
 .sidebar > ul{
 	box-sizing: border-box;
 	width: 100%;
-	height: 100%;
 	margin: 0;
 	padding: 0;
-	color: #7c7f92;
+	color: #5d6f7b;
 }
 .sidebar > ul > li{
 	line-height: 4rem;
@@ -72,18 +89,27 @@ i{
 	width: 100%;
 	cursor: pointer;
 }
-.sidebar > ul > li > a:hover{
-	color: #fff;
+.sidebar > ul > li:hover{
+	background: #222629;
 }
 .sidebar > ul > li > ul{
 	overflow: hidden;
 	display: none; 
-	background: #11172b;
+	background: #282c2f;
 }
 .sidebar > ul > li > a > i.add{
-	animation: add 0.2s linear forwards;
+	-webkit-animation: add 0.2s linear forwards;
+			animation: add 0.2s linear forwards;
 }
 @keyframes add{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-90deg);
+	}
+}
+@-webkit-keyframes add{
 	0% {
 		transform: rotate(0deg);
 	}
@@ -92,15 +118,38 @@ i{
 	}
 }
 .sidebar > ul > li > a > i.add_1{
-	animation: add_1 0.2s linear forwards;
+	-webkit-animation: add_1 0.2s linear forwards;
+			animation: add_1 0.2s linear forwards;
 }
-@keyframes add{
+@keyframes add_1{
 	0% {
 		transform: rotate(-90deg);
 	}
 	100% {
 		transform: rotate(0deg);
 	}
+}
+@-webkit-keyframes add_1{
+	0% {
+		transform: rotate(-90deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+.spinner > li > ul{
+	padding: 0;
+	margin: 0;
+}
+.spinner > li > ul > li > a{
+	display: block;
+	width: 100%;
+	padding-left: 40px;
+	color: #5d6f7b;
+	font-style: normal;
+}
+.spinner > li > ul > li a:hover{
+	color: #83949c;
 }
 /* content */
 .content{
